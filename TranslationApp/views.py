@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import Translator
+from googletrans import Translator
 
 # Create your views here.
 
@@ -18,8 +18,4 @@ def translated(request):
     dt2 = dt.lang
     translated = translate.translate(text,lang)
     tr = translated.text
-
-
-
-
-    return render(request, "translationapp/translated.html",{"translated":translated})
+    return render(request, "translationapp/translated.html", {"translated":tr})
