@@ -19,7 +19,7 @@ from TranslationApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.translate,name= "translate" ),
-    path('translated/', views.translated,name= "translated" )
+    path('',views.translate.as_view(),name= "translate" ),
+    path('translated/', views.translated.as_view(),name= "translated" )
 
 ]
